@@ -1,0 +1,70 @@
+{% extends 'layout.html' %} {% block title %} Home {% endblock %} {% block body %}
+<title>Quality Control Dashboard</title>
+<section class="jumbotron text-center mx-auto p-3" style="background-color:#E1F2FE">
+	<h1 class="display-4 text-warning bg-light">Welcome to Quality Control Dashboard</h1>
+    </br>
+    <div class="container">
+	<!-- what is inside our content -->
+	<div class="row workingspace">
+		<div class="col-lg-6">
+			<img src="/static/lab.jpg" alt="lab" class="img-fluid rounded" />
+		</div>
+		<div class="col-lg-5 ">
+			<h2 class="fs-2 fst-italic">What's  <span> Inside </span> <span> The Website </span></h2>
+			<h5 class="fs-6 fw-normal">Able to find the data based on timestamp feature</h5>
+            <h5 class="fs-6 fw-normal">Able to get the report about the data with charts view</h5>
+			<br />
+			<h2 class="fst-italic fw-bold">This website provides you to research the data.</h2>
+			<p class="text-secondary">Laman web ini menyediakan bagi anda untuk meriset data.</p>
+		</div>
+	</div>
+    </br>   
+
+</section>
+<section class="jumbotron text-center mx-auto" style="background-color:#FFF3B9">
+<!-- Tampilan database -->
+	<div class="row justify-content-center">
+		<div class="col info-panel-info">
+			<div class="col-lg text-center">
+				<h1 class= "fst-italic mt-3">Features</h1>
+				<h5 class="fw-normal">It may seem help you to analyze the data with:</h5>
+			</div>
+			</br>	
+			<div class="row">
+				<div class="col-sm">
+					<img src="/static/table.png" alt="Tables" class="img-fluid float-left d-flex w-50 t-50 mx-auto" />
+					</br>
+                    <h4>Tables</h4>
+				</div>
+				<div class="col-sm">
+					<img src="/static/charts.png" alt="Charts" class="img-fluid float-left d-flex w-50 t-50 mx-auto" />
+					</br>
+                    <h4>Charts</h4>
+				</div>
+			</div>
+            </br>
+<!--End Tampilan Database --></section>
+<section style="background-color: #AAF6FF" class="text-black">
+<!-- Anggota Kelompok -->
+        <h3 class="p-3">Our Teams</h3>
+        <div class="row">
+				<div class="col-sm">
+					<img src="/static/abim.jpeg" alt="19/447105/SV/16824" class="img-fluid float-left d-flex w-50 t-50 mx-auto" />
+					<h5>Abim Adhanis S.P. (19/447105/SV/16824)</h5>
+				</div>
+                <div class="col-sm">
+					<img src="/static/foto arya.jpeg" alt="19/447311/SV/17005" class="img-fluid float-left d-flex w-50 t-50 mx-auto" />
+					<h5>Arya Pratama Putra (19/447311/SV/17005)</h5>
+				</div>
+				<div class="col-lg">
+					<img src="/static/rafi.jpeg" alt="19/441187/SV/16539" class="img-fluid float-left d-flex w-50 t-50 mx-auto" />
+					<h5>Ahmad Rafi Ghoni (19/441187/SV/16539)</h5>
+				</div>
+				<div class="col-sm">
+					<img src="/static/Reinanda.jpeg" alt="19/447105/SV/16824" class="img-fluid float-left d-flex w-50 t-50 mx-auto" />
+					<h5>Renanda Hanif Tianara (19/447125/SV/16844)</h5>
+				</div>
+                
+	<!-- end Anggota Kelompok -->
+</section>
+{% endblock %}

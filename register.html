@@ -1,0 +1,51 @@
+{% extends 'layout.html' %} {% block title %} Sign Up {% endblock %} {% block content %}
+<title>Sign Up</title>
+
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-lg-6 info-panel-info">
+			<form action="/register" method="POST">
+				<div class="form-group">
+					<label>Username:</label>
+
+					<input type="text" class="form-control" name="username" />
+				</div>
+
+				<div class="form-group">
+					<label>Email:</label>
+
+					<input type="email" class="form-control" name="email" />
+				</div>
+
+				<div class="form-group">
+					<label>Password:</label>
+
+					<input type="password" class="form-control" name="password" />
+				</div>
+				<br />
+				<div class="form-group">
+					<button class="btn btn-primary">Sign Up</button>
+				</div>
+				<p>Please input your username, email, and password.</p>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- Testimonial -->
+<section class="testimonial">
+	<div class="row justify-content-center info-text">
+		<div class="col-lg text-center fs-2">
+			<h5>Dashboard Quality Control</h5>
+			<p class="fw-bold text-primary">Safety | High Quality | Genuine</p>
+		</div>
+	</div>
+	<div class="row justify-content-center text-center">
+		<div class="col-lg-8 fst-italic text-info">
+			<p>The most important thing is peace your mind.</p>
+		</div>
+	</div>
+</section>
+<!-- end Testimonial -->
+
+{% endblock %}

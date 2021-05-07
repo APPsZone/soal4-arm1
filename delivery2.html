@@ -1,0 +1,80 @@
+{% extends 'layout.html' %} {% block title %} Product Distribution {% endblock %} {% block body %}
+
+<!-- Jumbotron -->
+<section class="jumbotron text-center p-3" style="background-color: #fff3b9">
+	<img src="{{ url_for('static', filename= '/musseum.jpg')}}" alt="Validation" width="350" />
+	<h1 class="display-4 text-black">Product Distribution</h1>
+	<p class="lead text-black">Here, you can search the data for our user</p>
+</section>
+<!-- Akhir Jumbotron -->
+
+<!-- Tables -->
+<div class="col-md-15 mx-auto text-center">
+	<table id="example" class="table table-striped table-hover table-bordered table-warning" style="width: 100%">
+		<thead>
+			<tr>
+				<td width="10%">Kode Produk</td>
+				<td width="30%">Nama Produk</td>
+				<td width="10%">Status (Delivered/Onhold)</td>
+				<td width="30%">Time Stamp</td>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in hasil %}
+			<tr>
+				<td>{{item.Id}}</td>
+				<td>{{item.produk}}</td>
+				<td>{{item.stat}}</td>
+				<td>{{item.tanggal}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+</br>
+<h1 class="display-4 text-black fw-bold text-center">Distribution Chart</h1>
+<!--Awal Chart -->
+<canvas id="ChartDelivery" width="200" height="200"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="static/Chart.min.js"></script>
+<script>
+	const labels = {{chart_labels2 | tojson}};
+	const chart_data = {{ chart_data2 | tojson}};
+
+	const data = {
+	  labels: labels,
+	  datasets: [{
+	    label: 'Delivered',
+	    data: chart_data,
+	    backgroundColor: [
+	      'rgba(30, 255, 188, 0.2)',
+	      'rgba(31, 1, 186, 0.2)'
+	    ],
+	    borderColor: [
+	      'rgb(252, 68, 132)',
+	      'rgb(31, 1, 185)',
+	    ],
+	    borderWidth: 1
+	  }]
+	};
+
+	const config = {
+	  type: 'bar',
+	  data: data,
+	  options: {
+	    scales: {
+	      y: {
+	        beginAtZero: true
+	      }
+	    }
+	  },
+	};
+
+	var myChart = new Chart(
+	  document.getElementById('ChartDelivery'),
+	  config
+	);
+</script>
+
+<!-- Akhir Chart !-->
+{% endblock %}
